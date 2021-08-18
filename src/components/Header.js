@@ -79,7 +79,7 @@ export default function Header() {
                 variant="outlined"
                 color="primary"
                 size="large"
-                className={classes.signupbtn}
+                className={classes.getTestedbtn}
               >
                 Get Tested
               </Button>
@@ -89,7 +89,7 @@ export default function Header() {
               </Link>
             </>
           ) : null}
-          <Box>
+          <Box display="flex">
             <>
               <IconButton
                 aria-label="open cart"
@@ -241,18 +241,21 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
     lineHeight: 1.2,
     textAlign: "left",
-    margin: "0 0 0 6px",
+    margin: "0 0 0 10px",
+    padding: "8px 4px",
     width: "auto",
     textTransform: "capitalize",
   },
-  signupbtn: {
+  getTestedbtn: {
     minWidth: "120px",
     margin: "10px",
+    whiteSpace: "nowrap",
   },
   phone: {
     color: "#000000",
     textDecoration: "none",
     cursor: "pointer",
+    whiteSpace: "nowrap",
   },
   menuDrawer: {
     // marginTop: "100px",
