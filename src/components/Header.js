@@ -111,11 +111,11 @@ export default function Header() {
                   onClick={() => handleMenuToggle()}
                 >
                   <MenuIcon fontSize="large" />
+                  <MenuDrawer
+                    handleMenuToggle={handleMenuToggle}
+                    drawerMenuOpen={drawerMenuOpen}
+                  />
                 </IconButton>
-                <MenuDrawer
-                  handleMenuToggle={handleMenuToggle}
-                  drawerMenuOpen={drawerMenuOpen}
-                />
               </>
             ) : null}
           </Box>
@@ -145,7 +145,7 @@ function MenuDrawer({ handleMenuToggle, drawerMenuOpen }) {
         </IconButton> */}
         <img
           src="/logo.svg"
-          alt="Corona TEst Centre"
+          alt="Corona Test Centre"
           className={classes.logo}
         />
         <List>
@@ -158,7 +158,6 @@ function MenuDrawer({ handleMenuToggle, drawerMenuOpen }) {
                   to={url}
                   className={classes.menuDrawerLinks}
                 >
-                  {name}
                   <ListItemText primary={name} />
                 </ListItem>
               </Box>
