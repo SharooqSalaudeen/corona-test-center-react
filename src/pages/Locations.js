@@ -76,6 +76,7 @@ export default function Locations() {
           flexDirection="column"
           alignItems="center"
           position="relative"
+          className={classes.contentWrap}
         >
           <img
             src="/images/locations/location hero bg.svg"
@@ -156,6 +157,9 @@ function Location({ data }) {
 }
 
 const useStyles = makeStyles((theme) => ({
+  contentWrap: {
+    overflowX: "clip",
+  },
   background: {
     alignSelf: "center",
     maxHeight: "400px",

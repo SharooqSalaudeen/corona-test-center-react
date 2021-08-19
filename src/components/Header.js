@@ -267,5 +267,8 @@ const useStyles = makeStyles((theme) => ({
 
   cartContainer: {
     width: "360px",
+    [theme.breakpoints.down("xs")]: {
+      width: "280px",
+    },
   },
 }));

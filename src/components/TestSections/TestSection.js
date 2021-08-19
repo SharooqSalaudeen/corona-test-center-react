@@ -75,7 +75,7 @@ export default function TestSection() {
             Antigen, Day 2 & Day 8 Tests and Test to Release.
           </Typography>
           {/* ---------Tabs Start-------------- */}
-          <Box m={2} width="450px">
+          <Box m={2} width="550px" className={classes.testTabs}>
             <Tabs
               classes={tabsStyle}
               value={tabIndex}
@@ -94,7 +94,7 @@ export default function TestSection() {
         {
           tabIndex === 0 ? (
             // {/* ---------Simple Bundle Start-------------- */}
-            <Box p={4} className={classes.bundleWrap}>
+            <Box className={classes.bundleWrap}>
               <Box display="flex" alignItems="center">
                 <Typography variant="h4" color="initial">
                   Leaving the UK
@@ -339,11 +339,21 @@ const useStyles = makeStyles((theme) => ({
       padding: "40px 20px",
     },
   },
+  testTabs: {
+    width: "450px",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+  },
   bundleWrap: {
     border: "1px solid #649aab",
     borderRadius: "20px",
     backgroundColor: "#e9f3f5",
     height: "100%",
+    padding: "30px",
+    [theme.breakpoints.down("xs")]: {
+      padding: "30px 10px",
+    },
   },
   itemWrap: {
     border: "none",
@@ -352,6 +362,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "20px",
     padding: "30px",
     boxShadow: "6px 0 24px 0 rgb(0 0 0 / 10%)",
+    [theme.breakpoints.down("sm")]: {
+      padding: "30px 10px",
+    },
   },
   button: {
     padding: "16px 30px",
