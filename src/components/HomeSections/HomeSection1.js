@@ -15,7 +15,7 @@ export default function HomeSection1() {
       <Grid container>
         <Grid item sm={12} md={6}>
           <div className={classes.leftSection}>
-            <Box>
+            <Box width="100%">
               <Typography variant="h2">Private Covid Travel Tests</Typography>
               <Typography varaint="body1">
                 With more 5-star reviews than any other clinic, we're a leading
@@ -36,16 +36,24 @@ export default function HomeSection1() {
           </div>
         </Grid>
         <Grid item sm={12} md={6}>
-          <Box display="flex" justifyContent="flex-end">
-            <img
-              src="/images/home/hero-image.jpeg"
-              alt="background"
-              className={classes.background}
-            />
-          </Box>
+          <div>
+            <Box display="flex" justifyContent="flex-end">
+              <img
+                src="/images/home/hero-image.jpeg"
+                alt="background"
+                className={classes.background}
+              />
+            </Box>
+          </div>
         </Grid>
       </Grid>
-      <Container maxWidth="md">
+      <Box
+        maxWidth="800px"
+        margin="auto"
+        // alignItems="center"
+        // display="flex"
+        // justifyContent="center"
+      >
         <div className={classes.testmonyWrap}>
           <div>
             <img
@@ -93,7 +101,7 @@ export default function HomeSection1() {
             />
           </div>
         </div>
-      </Container>
+      </Box>
     </Container>
   );
 }
@@ -108,18 +116,19 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignItem: "center",
-    margin: "20px 30px",
+    // margin: "20px 30px",
     [theme.breakpoints.down("sm")]: {
       height: "auto",
-      margin: "50px 30px",
+      // margin: "50px 30px",
     },
   },
   background: {
     objectFit: "cover",
     width: "100%",
     [theme.breakpoints.down("sm")]: {
-      maxWidth: "500px",
-      paddingLeft: "100px",
+      width: "60vw",
+      // height: "60vh",
+      marginLeft: "20%",
     },
   },
   testmonyWrap: {

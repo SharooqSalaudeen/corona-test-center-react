@@ -178,7 +178,10 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "700px",
     textAlign: "center",
     [theme.breakpoints.down("sm")]: {
-      top: "50px",
+      top: "40px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      top: "0px",
     },
   },
   locationsContainer: {
