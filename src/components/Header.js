@@ -50,14 +50,16 @@ export default function Header() {
           display="flex"
           alignItems="center"
           justifyContent="space-between"
-          m={2}
+          m={1}
         >
-          <Box component={RouterLink} to="/">
-            <img
-              src="/logo.svg"
-              alt="Corona TEst Centre"
-              className={classes.logo}
-            />
+          <Box>
+            <Box component={RouterLink} to="/" width="100%">
+              <img
+                src="/logo.svg"
+                alt="Corona TEst Centre"
+                className={classes.logo}
+              />
+            </Box>
           </Box>
           {showMenu ? (
             <>
@@ -232,9 +234,8 @@ const useStyles = makeStyles((theme) => ({
     zIndex: "100",
   },
   logo: {
-    minWidth: "160px",
-    maxWidth: "200px",
-    height: "auto",
+    minWidth: "140px",
+    maxWidth: "100%",
   },
   links: {
     fontWeight: 600,
